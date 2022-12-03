@@ -11,8 +11,8 @@ use \LINE\LINEBot\MessageBuilder\StickerMessageBuilder;
 use \LINE\LINEBot\SignatureValidator as SignatureValidator;
 $pass_signature = true;
 // set LINE channel_access_token and channel_secret
-$channel_access_token = "";
-$channel_secret = "";
+$channel_access_token = "eusoQ3P6jWN41mpwoRXTS8B7/jlREJlMpH/OjkPM1+On3kbV8MpBWROWTE6jSBA00Z7FmNxusWCGBuwcvz69uCISpJCXkFr5eyzfLYuJ4vmaO6DWqZVG3DVzfMEyzMeKtSPgRyHNR6xGk9HXmC+UoQdB04t89/1O/w1cDnyilFU=";
+$channel_secret = "debe386331f45b67423bb962e044f038";
 // inisiasi objek bot
 $httpClient = new CurlHTTPClient($channel_access_token);
 $bot = new LINEBot($httpClient, ['channelSecret' => $channel_secret]);
