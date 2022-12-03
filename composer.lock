@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "22aa1dabb43e3d905cdd4e554b4370bb",
+    "content-hash": "ed68f5ae9bb87b1cce7d2be10f1c9834",
     "packages": [
         {
             "name": "fig/http-message-util",
@@ -338,36 +338,42 @@
         },
         {
             "name": "linecorp/line-bot-sdk",
-            "version": "3.6.0",
+            "version": "7.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/line/line-bot-sdk-php.git",
-                "reference": "e1515090eaf2106efdbdf51b1a6adf812844f54f"
+                "reference": "e141f29cd7b9f27615d11f69e329f2b83ed70654"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/line/line-bot-sdk-php/zipball/e1515090eaf2106efdbdf51b1a6adf812844f54f",
-                "reference": "e1515090eaf2106efdbdf51b1a6adf812844f54f",
+                "url": "https://api.github.com/repos/line/line-bot-sdk-php/zipball/e141f29cd7b9f27615d11f69e329f2b83ed70654",
+                "reference": "e141f29cd7b9f27615d11f69e329f2b83ed70654",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
                 "ext-json": "*",
-                "php": ">=5.5"
+                "ext-sockets": "*",
+                "php": ">=7.2"
             },
             "require-dev": {
-                "indigophp/hash-compat": "~1.1.0",
-                "phpmd/phpmd": "~2.4",
-                "phpunit/phpunit": "^4.8.24||^5||^6",
-                "squizlabs/php_codesniffer": "~2.6||^3",
-                "symfony/config": "^3.3",
-                "symfony/dependency-injection": "^3.3"
-            },
-            "suggest": {
-                "apigen/apigen": "Install with roave/better-reflection:dev-master to generate docs",
-                "roave/better-reflection": "Required by apigen/apigen:dev-master"
+                "orchestra/testbench": "*",
+                "phpmd/phpmd": "2.13.0",
+                "phpstan/phpstan": "1.8.9",
+                "phpunit/phpunit": "^7||^8||^9",
+                "squizlabs/php_codesniffer": "3.7.1"
             },
             "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "LINE\\Laravel\\LINEBotServiceProvider"
+                    ],
+                    "aliases": {
+                        "LINEBot": "LINE\\Laravel\\Facade\\LINEBot"
+                    }
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "LINE\\": "src/"
@@ -386,11 +392,16 @@
                 {
                     "name": "Satoru Yoshihara",
                     "email": "vaduz0@gmail.com",
-                    "role": "Maintainer"
+                    "role": "Retired"
                 },
                 {
                     "name": "Satoshi Shibuya",
                     "email": "satosby@gmail.com",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Shunsuke Mori",
+                    "email": "morimorim7180@gmail.com",
                     "role": "Maintainer"
                 }
             ],
@@ -403,9 +414,9 @@
             ],
             "support": {
                 "issues": "https://github.com/line/line-bot-sdk-php/issues",
-                "source": "https://github.com/line/line-bot-sdk-php/tree/3.6.0"
+                "source": "https://github.com/line/line-bot-sdk-php/tree/7.6.1"
             },
-            "time": "2018-10-26T03:59:54+00:00"
+            "time": "2022-10-17T08:29:38+00:00"
         },
         {
             "name": "nikic/fast-route",
@@ -1024,6 +1035,56 @@
             "time": "2019-03-08T08:55:37+00:00"
         },
         {
+            "name": "selective/basepath",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/selective-php/basepath.git",
+                "reference": "63961fbfcaf492bd0ae8e40653f6c3c750c2f8ad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/selective-php/basepath/zipball/63961fbfcaf492bd0ae8e40653f6c3c750c2f8ad",
+                "reference": "63961fbfcaf492bd0ae8e40653f6c3c750c2f8ad",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2 || ^8.0",
+                "psr/http-server-middleware": "^1"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2",
+                "overtrue/phplint": "^2",
+                "phpstan/phpstan": "0.*",
+                "phpunit/phpunit": "^8 || ^9",
+                "slim/psr7": "^1",
+                "slim/slim": "^4",
+                "squizlabs/php_codesniffer": "^3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Selective\\BasePath\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A URL base path detector for Slim 4",
+            "homepage": "https://github.com/selective-php/basepath",
+            "keywords": [
+                "basepath",
+                "slim",
+                "slim4"
+            ],
+            "support": {
+                "issues": "https://github.com/selective-php/basepath/issues",
+                "source": "https://github.com/selective-php/basepath/tree/2.1.0"
+            },
+            "time": "2021-07-17T10:03:02+00:00"
+        },
+        {
             "name": "slim/psr7",
             "version": "1.6",
             "source": {
@@ -1311,7 +1372,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.4"
+        "php": "^7.3"
     },
     "platform-dev": [],
     "plugin-api-version": "2.3.0"

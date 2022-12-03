@@ -10,7 +10,8 @@
         "nyholm/psr7-server": "^1.0",
         "guzzlehttp/psr7": "^2.4",
         "http-interop/http-factory-guzzle": "^1.2",
-        "laminas/laminas-diactoros": "^2.17"
+        "laminas/laminas-diactoros": "^2.17",
+        "selective/basepath": "^2.1"
     },
     "autoload": {
         "psr-4": {
